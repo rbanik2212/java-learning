@@ -1,3 +1,5 @@
+package testing;
+
 public abstract class Doctor extends Human {
     private final String university;
     private String practice;

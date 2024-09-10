@@ -1,5 +1,6 @@
+package testing;
+
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Solution2 {
 
@@ -54,12 +55,6 @@ public class Solution2 {
     }
 
 
-    public static int findLargestArea(ArrayList<Integer> nums){
-
-
-    }
-
-
 
     public static void main(String[] args) {
         int[] arr = {2, 5, 6, 0, 0, 1, 2};
@@ -71,7 +66,7 @@ public class Solution2 {
         Solution2.largestRectangleArea(heights);
 
 
-//        boolean test = Solution2.search(arr, target);
+//        boolean test = testing.Solution2.search(arr, target);
 
 //        System.out.println(test);
 

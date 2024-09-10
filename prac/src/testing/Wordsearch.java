@@ -1,3 +1,5 @@
+package testing;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,7 +26,7 @@ public class Wordsearch {
             sb.append("\n");
         }
 
-        return "Wordsearch{ \n" +
+        return "testing.Wordsearch{ \n" +
                 "board=\n" + sb +
                 ",word='" + word + '\'' +
                 '}';
@@ -115,7 +117,7 @@ public class Wordsearch {
 //        System.out.println(board[0][1]);
 //        System.out.println(board[0][1]);
 //        System.out.println(board[0][1]);
-//        Wordsearch ws = new Wordsearch(board, word);
+//        testing.Wordsearch ws = new testing.Wordsearch(board, word);
 //        ws.letterCheck();
 //
 //        System.out.println(ws);

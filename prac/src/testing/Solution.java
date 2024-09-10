@@ -1,4 +1,4 @@
-import java.util.Arrays;
+package testing;
 
 class Solution {
     public static int removeDuplicates(int[] nums) {

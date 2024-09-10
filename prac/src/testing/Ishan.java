@@ -1,3 +1,5 @@
+package testing;
+
 public class Ishan extends Doctor{
 
     public Ishan(String name, int age, double height, String university) {

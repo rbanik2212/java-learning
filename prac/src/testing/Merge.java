@@ -1,3 +1,5 @@
+package testing;
+
 import java.util.Arrays;
 
 // {12, 234, 6345, 745, 24, 1} | {12, 234, 6345, 745, 24, 1, 45}

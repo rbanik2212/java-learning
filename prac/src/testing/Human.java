@@ -1,3 +1,5 @@
+package testing;
+
 public class Human implements Eating{
     private String name;
     private int age;
@@ -25,7 +27,7 @@ public class Human implements Eating{
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "testing.Human{" +
                 "name='" + this.getName() + '\'' +
                 ", age=" + this.getAge()+
                 ", height=" + this.height +
@@ -39,6 +41,6 @@ public class Human implements Eating{
 
     @Override
     public void eating() {
-        System.out.println("I am Eating Food now");
+        System.out.println("I am testing.Eating Food now");
     }
 }
