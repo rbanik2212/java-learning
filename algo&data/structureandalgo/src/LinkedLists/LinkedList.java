@@ -1,14 +1,14 @@
-//class Node {
+package LinkedLists;//class LinkedLists.Node {
 //    int value;
-//    Node next;
+//    LinkedLists.Node next;
 //
-//    Node(int value) {
+//    LinkedLists.Node(int value) {
 //        this.value = value;
 //    }
 //
 //    @Override
 //    public String toString() {
-//        return "Node{" +
+//        return "LinkedLists.Node{" +
 //                "value=" + value +
 //                ", next=" + next +
 //                '}';
@@ -223,7 +223,7 @@ public class LinkedList {
             fast = fast.next.next;
 
             if (slow.equals(fast)) {
-                System.out.println("Found Node");
+                System.out.println("Found LinkedLists.Node");
                 return slow;
             }
         }
@@ -340,7 +340,7 @@ public class LinkedList {
 
     @Override
     public String toString() {
-        return "LinkedList{" +
+        return "LinkedLists.LinkedList{" +
                 "length=" + length +
                 ", head=" + head +
                 ", tail=" + tail +

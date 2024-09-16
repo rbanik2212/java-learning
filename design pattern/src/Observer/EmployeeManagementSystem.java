@@ -14,7 +14,6 @@ public class EmployeeManagementSystem {
     public void registerObserver(IObserver obs){
         observerList.add(obs);
     }
-
     public void modifyEmployeeName(String newName){
         this.employee.setName(newName);
         notifyAllDepartments();

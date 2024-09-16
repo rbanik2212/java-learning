@@ -1,3 +1,5 @@
+package LinkedLists;
+
 class Node {
     int value;
     Node next;
@@ -13,7 +15,7 @@ class Node {
         String nextItem = this.next == null ? "null" : Integer.toString(this.next.value);
         String prevItem = this.prev == null ? "null" : Integer.toString(this.prev.value);
 
-        String response = "Node{" + "value=" + value + ", next=" + nextItem + ", prev=" + prevItem + '}';
+        String response = "LinkedLists.Node{" + "value=" + value + ", next=" + nextItem + ", prev=" + prevItem + '}';
 
         return response;
     }
@@ -210,7 +212,7 @@ public class DoubleLinkedList {
 
     @Override
     public String toString() {
-        return "DoubleLinkedList{" +
+        return "LinkedLists.DoubleLinkedList{" +
                 "head=" + head +
                 ", tail=" + tail +
                 ", length=" + length +
