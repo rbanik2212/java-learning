@@ -10,10 +10,8 @@ class Node{
     }
 }
 
-
 public class BinarySearchTree {
     Node root;
-
 
     public boolean insert(int value){
         Node newNode =new Node(value);
@@ -42,10 +40,7 @@ public class BinarySearchTree {
                 tmp= tmp.right;
             }
 
-
-
         }
-
 
     }
 
@@ -55,7 +50,6 @@ public class BinarySearchTree {
         }
 
         Node tmp = root;
-
 
         while(tmp != null){
             if(tmp.value > value){
