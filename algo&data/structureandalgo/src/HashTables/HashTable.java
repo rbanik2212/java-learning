@@ -7,23 +7,23 @@ public class HashTable {
     private int size = 7;
     private Node[] dataMap;
 
-    public HashTable(){
+    public HashTable() {
         dataMap = new Node[size];
     }
 
 
-    private int hash(String key){
+    private int hash(String key) {
         int hash = 0;
         char[] keyChars = key.toCharArray();
 
-        for(int i =0;i <keyChars.length; i++){
+        for (int i = 0; i < keyChars.length; i++) {
             int asciiValue = keyChars[i];
-            hash = (hash + asciiValue *23) % dataMap.length;
+            hash = (hash + asciiValue * 23) % dataMap.length;
         }
         return hash;
     }
 
-    class Node{
+    class Node {
         private String key;
         private int value;
         private Node next;
@@ -34,28 +34,28 @@ public class HashTable {
         }
     }
 
-    public void printTable(){
+    public void printTable() {
         System.out.println("here");
-        for(int i = 0; i < dataMap.length; i++){
+        for (int i = 0; i < dataMap.length; i++) {
             System.out.println(i + " :");
             Node tmp = dataMap[i];
-            while(tmp != null){
-                System.out.printf( "\t{ %s = %d }\n", tmp.key, tmp.value);
+            while (tmp != null) {
+                System.out.printf("\t{ %s = %d }\n", tmp.key, tmp.value);
                 tmp = tmp.next;
             }
         }
     }
 
 
-    public void set(String key, int value){
+    public void set(String key, int value) {
         int index = hash(key);
         Node newNode = new Node(key, value);
 
-        if(dataMap[index] == null) {
+        if (dataMap[index] == null) {
             dataMap[index] = newNode;
-        }else {
+        } else {
             Node temp = dataMap[index];
-            while(temp.next != null){
+            while (temp.next != null) {
                 temp = temp.next;
             }
             temp.next = newNode;
@@ -64,13 +64,13 @@ public class HashTable {
 
     }
 
-    public int get(String key){
+    public int get(String key) {
         int index = hash(key);
 
         Node temp = dataMap[index];
 
-        while(temp != null){
-            if(temp.key == key){
+        while (temp != null) {
+            if (temp.key == key) {
                 return temp.value;
             }
             temp = temp.next;
@@ -78,19 +78,18 @@ public class HashTable {
         return 0;
     }
 
-    public ArrayList keys(){
+    public ArrayList keys() {
         ArrayList<String> allKeys = new ArrayList<>();
 
-        for(int i=0; i< dataMap.length; i++){
+        for (int i = 0; i < dataMap.length; i++) {
             Node temp = dataMap[i];
-            while(temp != null){
+            while (temp != null) {
                 allKeys.add(temp.key);
                 temp = temp.next;
             }
         }
         return allKeys;
     }
-
 
 
 }
