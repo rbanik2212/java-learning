@@ -1,14 +1,51 @@
 package practiceQuestions;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] nTest = {2,4,3};
-        int[] test = ques2(nTest);
+        List<Integer> arr = new ArrayList<>(Arrays.asList(100,70,60,50,40));
+        int test = BinarySearch(65, arr);
+        System.out.println("index is " + test);
 
-        System.out.println(Arrays.toString(test));
+    }
+
+
+    private static int BinarySearch(int score, List<Integer> ranked){
+        int low = ranked.size() -1;
+        int high = 0;
+
+        while(low >= high){
+            int mid = high + (low - high) /2;
+            System.out.println("mid" +mid);
+            System.out.println("low" + low);
+            System.out.println("high" + high);
+            if(low == high){
+                System.out.println("here");
+                return low;
+            }
+            if(ranked.get(mid) <= score){
+                System.out.println("here1");
+                if((low - 1) == high && (high +1) == low ){
+                    return low;
+                }
+                low = mid -1;
+            }
+            else if(ranked.get(mid) >= score){
+                System.out.println("here2");
+//                if((low - 1) == high && (high +1) == low ){
+//                    return high;
+//                }
+                high = mid + 1;
+            }
+
+
+        }
+        return -1;
+
 
     }
 
